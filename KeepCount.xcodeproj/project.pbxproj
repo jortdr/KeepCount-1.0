@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,7 +15,32 @@
 		0566D94A246B40A4004BFD84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0566D948246B40A4004BFD84 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0563A269246C5CB100594001 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05AE7847246C4BAA00EFF597 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0563A25D246C5CB100594001 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		0563A26D246C630000594001 /* KeepCount.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KeepCount.entitlements; sourceTree = "<group>"; };
 		0566D93A246B40A2004BFD84 /* KeepCount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepCount.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0566D93D246B40A2004BFD84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0566D93F246B40A2004BFD84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,10 +62,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0563A25C246C5CB100594001 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0563A25D246C5CB100594001 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0566D931246B40A2004BFD84 = {
 			isa = PBXGroup;
 			children = (
 				0566D93C246B40A2004BFD84 /* KeepCount */,
+				0563A25C246C5CB100594001 /* Frameworks */,
 				0566D93B246B40A2004BFD84 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +90,7 @@
 		0566D93C246B40A2004BFD84 /* KeepCount */ = {
 			isa = PBXGroup;
 			children = (
+				0563A26D246C630000594001 /* KeepCount.entitlements */,
 				0566D93D246B40A2004BFD84 /* AppDelegate.swift */,
 				0566D93F246B40A2004BFD84 /* SceneDelegate.swift */,
 				0566D941246B40A2004BFD84 /* ViewController.swift */,
@@ -77,6 +112,8 @@
 				0566D936246B40A2004BFD84 /* Sources */,
 				0566D937246B40A2004BFD84 /* Frameworks */,
 				0566D938246B40A2004BFD84 /* Resources */,
+				05AE7847246C4BAA00EFF597 /* Embed Watch Content */,
+				0563A269246C5CB100594001 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -223,6 +260,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -276,6 +314,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -284,6 +323,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KeepCount/KeepCount.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GL9WD3G28B;
 				INFOPLIST_FILE = KeepCount/Info.plist;
@@ -303,6 +343,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = KeepCount/KeepCount.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GL9WD3G28B;
 				INFOPLIST_FILE = KeepCount/Info.plist;

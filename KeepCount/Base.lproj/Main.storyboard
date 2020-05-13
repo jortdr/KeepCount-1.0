@@ -16,19 +16,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="31" translatesAutoresizingMaskIntoConstraints="NO" id="9OQ-if-SlF">
-                                <rect key="frame" x="140.5" y="395" width="94" height="32"/>
+                                <rect key="frame" x="140.5" y="317.5" width="94" height="32"/>
                                 <connections>
                                     <action selector="stepper:" destination="BYZ-38-t0r" eventType="valueChanged" id="8wI-Ob-iG9"/>
                                 </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3f4-xW-JMF">
-                                <rect key="frame" x="176.5" y="312.5" width="22" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <rect key="frame" x="172" y="216" width="31" height="65"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AS7-MM-1uC">
-                                <rect key="frame" x="164.5" y="460" width="46" height="30"/>
+                                <rect key="frame" x="159.5" y="399.5" width="56" height="38"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <state key="normal" title="RESET">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -37,14 +38,14 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.72052055599999998" green="0.88709580899999996" blue="0.59128642080000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.25381157756620459" green="0.88709580899999996" blue="0.33736345651006949" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="9OQ-if-SlF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="77.5" id="65O-tw-bMp"/>
-                            <constraint firstItem="3f4-xW-JMF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Vqz-DK-K5V"/>
-                            <constraint firstItem="AS7-MM-1uC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZcL-1b-1v3"/>
-                            <constraint firstItem="9OQ-if-SlF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dhn-RJ-3cy"/>
-                            <constraint firstItem="AS7-MM-1uC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="141.5" id="xfX-fV-m0k"/>
-                            <constraint firstItem="3f4-xW-JMF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zYe-qH-BDV"/>
+                            <constraint firstItem="3f4-xW-JMF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-85" id="OQw-gq-a7J"/>
+                            <constraint firstItem="9OQ-if-SlF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Qrg-6Y-q34"/>
+                            <constraint firstItem="AS7-MM-1uC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="85" id="bbw-kk-9NO"/>
+                            <constraint firstItem="3f4-xW-JMF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eXo-kk-hEe"/>
+                            <constraint firstItem="AS7-MM-1uC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="naK-eh-hOm"/>
+                            <constraint firstItem="9OQ-if-SlF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xP3-pU-KM3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

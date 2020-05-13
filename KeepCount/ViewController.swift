@@ -8,16 +8,24 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
-    
-    
+
+    //iOS App
     @IBOutlet weak var CountLabel: UILabel!
     var count:Int = 0
     
     @IBOutlet var background: UIView!
     @IBOutlet weak var ResetButton: UIButton!
     @IBOutlet weak var stepper: UIStepper!
+    //End iOS App
+    
+    //Start iOS Widget
 
+    
+    //End iOS Widget
+
+    
     
     let tooMany = UIAlertController(title: "Actie niet toegestaan", message: "Je zit nu op het huidige maximumaantal van 30 personen.", preferredStyle: .alert)
     
@@ -25,6 +33,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
         tooMany.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         
@@ -35,6 +44,7 @@ class ViewController: UIViewController {
         
 
     }
+    
 
     @IBAction func stepper(_ sender: UIStepper) {
         if stepper.value > 30 {
@@ -70,7 +80,7 @@ class ViewController: UIViewController {
         } else if count >= 10 && count <= 19 {
             background.backgroundColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
         } else if count <= 9 {
-            background.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+            background.backgroundColor = #colorLiteral(red: 0.2899456918, green: 0.8417714238, blue: 0.5147950053, alpha: 1)
         }
     }
 }
