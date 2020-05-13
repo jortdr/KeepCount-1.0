@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="9OQ-if-SlF">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="31" translatesAutoresizingMaskIntoConstraints="NO" id="9OQ-if-SlF">
                                 <rect key="frame" x="140.5" y="395" width="94" height="32"/>
                                 <connections>
                                     <action selector="stepper:" destination="BYZ-38-t0r" eventType="valueChanged" id="8wI-Ob-iG9"/>
@@ -32,6 +32,9 @@
                                 <state key="normal" title="RESET">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="ResetPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="290-kp-V9R"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.72052055599999998" green="0.88709580899999996" blue="0.59128642080000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -47,7 +50,9 @@
                     </view>
                     <connections>
                         <outlet property="CountLabel" destination="3f4-xW-JMF" id="Cfg-Wm-Tq2"/>
+                        <outlet property="ResetButton" destination="AS7-MM-1uC" id="PIS-CR-adg"/>
                         <outlet property="background" destination="8bC-Xf-vdC" id="WWE-Z2-Wih"/>
+                        <outlet property="stepper" destination="9OQ-if-SlF" id="jkO-cn-2x6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
