@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     
     @IBOutlet weak var CountLabel: UILabel!
     var count:Int = 0
@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     
     let tooMany = UIAlertController(title: "Actie niet toegestaan", message: "Je zit nu op het huidige maximumaantal van 30 personen.", preferredStyle: .alert)
     
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,11 @@ class ViewController: UIViewController {
         tooMany.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         
         
+        count = defaults.integer(forKey:"countKey")
+        stepper.value = Double(defaults.integer(forKey: "countKey"))
+        ChangeBGColor()
+        
+
     }
 
     @IBAction func stepper(_ sender: UIStepper) {
@@ -38,7 +44,8 @@ class ViewController: UIViewController {
         
         count = Int(sender.value)
         ChangeBGColor()
-            
+        
+            defaults.set(count, forKey: "countKey")
             
         }
     }
@@ -48,6 +55,8 @@ class ViewController: UIViewController {
         stepper.value = 0
         CountLabel.text = String(count)
         ChangeBGColor()
+        
+        defaults.set(count, forKey: "countKey")
         
     }
     
