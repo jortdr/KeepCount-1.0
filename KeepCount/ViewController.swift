@@ -29,13 +29,21 @@ class ViewController: UIViewController {
     
     let tooMany = UIAlertController(title: "Actie niet toegestaan", message: "Je zit nu op het huidige maximumaantal van 30 personen.", preferredStyle: .alert)
     
+    let resetWarning = UIAlertController(title: "Waarschuwing", message: "Weet je zeker dat je het aantal wilt herstellen?", preferredStyle: .alert)
+    
     let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        tooMany.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        tooMany.addAction(UIAlertAction(title: "Oké", style: .cancel, handler: nil))
+        
+        resetWarning.addAction(UIAlertAction(title: "Nee", style: .cancel, handler: nil))
+        
+        resetWarning.addAction(UIAlertAction(title: "Ja", style: .destructive, handler: { action in
+            self.res()
+        }))
         
         
         count = defaults.integer(forKey:"countKey")
@@ -61,13 +69,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func ResetPress(_ sender: Any) {
+        self.present(resetWarning, animated: true)
+    }
+    
+    func res() -> Void {
         count = 0
         stepper.value = 0
         CountLabel.text = String(count)
         ChangeBGColor()
         
         defaults.set(count, forKey: "countKey")
-        
     }
     
     func ChangeBGColor() -> Void {
@@ -80,7 +91,7 @@ class ViewController: UIViewController {
         } else if count >= 10 && count <= 19 {
             background.backgroundColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
         } else if count <= 9 {
-            background.backgroundColor = #colorLiteral(red: 0.2899456918, green: 0.8417714238, blue: 0.5147950053, alpha: 1)
+            background.backgroundColor = #colorLiteral(red: 0.2901960784, green: 0.8431372549, blue: 0.5137254902, alpha: 1)
         }
     }
 }
